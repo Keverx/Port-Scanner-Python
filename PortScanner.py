@@ -56,11 +56,11 @@ def main():
         hilos.append(hilo)
         hilo.start()
 
-    # 3. ESPERAMOS
+    # esperamos a los hilos que regresen
     for hilo in hilos:
         hilo.join()
 
-    # 4. REPORTE
+    # reporte de los puertos
     if puertos_abiertos:
         puertos_abiertos.sort()
         print(f"\n--- REPORTE FINAL ---")
@@ -87,4 +87,5 @@ def main():
 # "Si este archivo es el principal, ejecuta main()"
 if __name__ == "__main__":
     main()
+
     input("\nPresiona ENTER para salir...")
